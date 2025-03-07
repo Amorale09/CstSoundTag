@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+        <script>
+            function Play() {
+                var play=document.getElementById("music");
+                play.play();
+            }
+
+            $(document).ready(function(){
+                Play();
+            })
+        </script>
+        <style>
+            html {
+                height: 100%;
+            }
+            body {
+                min-height: 100%;
+                margin: 0;
+            }
+            .btn{
+                min-height: 100vh;
+                min-width: 100vw;
+                border: 0;
+                background-color: rgb(34, 34, 34);
+                padding: 0;
+            }
+            .text{
+                color: white;
+                font-size: 3vw;
+            }
+        </style>
+    </head>
+    <body>
+        <button class="btn" onclick="Play()">
+            <label class="text">TG:</label>
+        </button>
+        <audio id="music" loop>
+            <source src="sounds/zhestokie-stony.mp3" type="audio/mpeg">
+        </audio>
+    </body>
+</html>
